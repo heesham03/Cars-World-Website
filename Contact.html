@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cars World - Contact</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <marquee>Welcome to Cars World</marquee>
+
+    <header>
+        <div class="container">
+            <h1><b>Cars World</b></h1>
+        </div>
+    </header>
+
+    <nav>
+        <div class="container">
+            <a href="index.html">Home</a>
+            <a href="about.html">About Us</a>
+            <a href="Luxury.html">Luxury Cars</a>
+            <a href="sportscar.html">Sports Cars</a>
+            <a href="Contact.html">Contact</a>
+        </div>
+    </nav>
+
+    <div class="container">
+        <h2>Contact Us</h2>
+
+        <p>
+            At <b><u>Cars World</u></b>, we value our visitors and customers more than anything else.
+            Whether you are a car enthusiast, a potential buyer, or simply someone curious about the world of
+            automobiles,
+            we are always happy to hear from you. <i>Communication is the key to building strong relationships</i>,
+            and we want to make sure that reaching us is as easy and smooth as driving your dream car.
+        </p>
+
+        <p>
+            You can get in touch with us in multiple ways — by filling out our online contact form,
+            by sending us an email, or even by giving us a call. <b>Our dedicated support team</b>
+            is always ready to answer your questions, provide guidance, or help you choose the perfect
+            car for your lifestyle. We believe that every query is important, whether it is about
+            <u>luxury sedans, powerful SUVs, or iconic sports cars</u>.
+        </p>
+
+        <p>
+            <b>Our Contact Details:</b><br>
+            📍 <i>Address:</i> Cars World Showroom, BKC, Mumbai, India<br>
+            📧 <i>Email:</i> <u>info@carsworld.com</u><br>
+            📞 <i>Phone:</i> +91-9876543210<br>
+            🕒 <i>Working Hours:</i> Monday – Saturday, 10:00 AM – 7:00 PM
+        </p>
+
+        <hr>
+
+        <h3>Get in Touch with Us</h3>
+        <form class="contact-form" onsubmit="return validateForm()">
+            <label for="name">Full Name:</label>
+            <input type="text" id="name" name="name" placeholder="Enter your full name">
+
+            <label for="email">Email Address:</label>
+            <input type="email" id="email" name="email" placeholder="Enter your email">
+
+            <label for="phone">Phone Number:</label>
+            <input type="tel" id="phone" name="phone" placeholder="Enter your phone number">
+
+            <label for="car">Interested Car:</label>
+            <select id="car" name="car">
+                <option value="">-- Select a Car --</option>
+                <option value="rolls">Rolls-Royce Phantom</option>
+                <option value="mercedes">Mercedes-Benz G-Class</option>
+                <option value="rangerover">Range Rover Autobiography</option>
+                <option value="bugatti">Bugatti Chiron</option>
+                <option value="chevrolet">Chevrolet Corvette E-Ray</option>
+                <option value="porsche">Porsche 911 Carrera</option>
+                <option value="other">Other</option>
+            </select>
+
+            <label for="message">Your Message:</label>
+            <textarea id="message" name="message" rows="6" placeholder="Write your message here..."></textarea>
+
+            <button type="submit">Submit</button>
+        </form>
+
+        <p>
+            <i>Thank you for visiting Cars World!</i> We believe cars are not just machines; they are a symbol of
+            <u>freedom, style, and innovation</u>. Stay connected with us, and let us help you discover the
+            <b>perfect car that matches your personality and dreams</b>.
+    </div>
+    <script>
+        function validateForm() {
+            var name = document.getElementById("name").value.trim();
+            var email = document.getElementById("email").value.trim();
+            var message = document.getElementById("message").value.trim();
+            var car = document.getElementById("car").value;
+
+
+            if (name == "" || email == "" || message == "") {
+                alert("You have not filled all the required fields. Please complete the form before submitting.");
+                return false;
+            }
+
+            if (car == "") {
+                alert("Please select a car you are interested in.");
+                return false;
+            }
+
+            alert("Thank you, " + name + "! Your enquiry has been submitted successfully.");
+            return true;
+        }
+
+    </script>
+</body>
+
+</html>
